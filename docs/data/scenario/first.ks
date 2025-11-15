@@ -1,6 +1,8 @@
 *narita
+[bg storage=train.png time=500]
 
-[eval exp="f.love=0"] ; 好感度（love）を0で初期化
+[eval exp="f.love=0"]
+; 好感度（love）を0で初期化
 
 [title name="Narita to Sakura ～電車通学マジック～"]
 [hidemenubutton]
@@ -19,26 +21,24 @@
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
-
 反応1[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
 
-[eval exp="f.love = f.love + 1"] ; 好感度+1
-現在の好感度：[emb exp="f.love"][l]
+[eval exp="f.love = f.love + 1"]
+; 好感度+1
+現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*mori]
 
 *tag_2
 
-[bg storage=run.jpg time=500]
-
 [cm]
 反応2[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
 
-[eval exp="f.love = f.love + 2"] ; 好感度+2
-現在の好感度：[emb exp="f.love"][l]
+[eval exp="f.love = f.love + 2"]
+; 好感度+2
+現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*mori]
 
@@ -54,20 +54,24 @@
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
-
 反応3[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
+
+[eval exp="f.love = f.love + 1"]
+; 好感度+1
+現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*sando]
 
 *tag_4
 
-[bg storage=run.jpg time=500]
-
 [cm]
 反応4[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
+
+[eval exp="f.love = f.love + 2"]
+; 好感度+2
+現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*sando]
 
@@ -83,20 +87,24 @@
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
-
 反応5[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
+
+[eval exp="f.love = f.love + 1"]
+; 好感度+1
+現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*shisui]
 
 *tag_6
 
-[bg storage=run.jpg time=500]
-
 [cm]
 反応6[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
+
+[eval exp="f.love = f.love + 2"]
+; 好感度+2
+現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*shisui]
 
@@ -112,20 +120,24 @@
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
-
 反応7[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
+
+[eval exp="f.love = f.love + 1"]
+; 好感度+1
+現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*osakura]
 
 *tag_8
 
-[bg storage=run.jpg time=500]
-
 [cm]
 反応8[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
+
+[eval exp="f.love = f.love + 2"]
+; 好感度+2
+現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*osakura]
 
@@ -141,19 +153,49 @@
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
-
 反応9[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
 
-[jump target=*narita]
+[eval exp="f.love = f.love + 1"]
+; 好感度+1
+現在の好感度：[emb exp="f.love"][l][cm]
+
+[jump target=*sakura]
 
 *tag_10
 
-[bg storage=run.jpg time=500]
-
 [cm]
 反応10[l][r]
-好感度変化[l][cm]
+好感度変化[l][r]
+
+[eval exp="f.love = f.love + 2"]
+; 好感度+2
+現在の好感度：[emb exp="f.love"][l][cm]
+
+[jump target=*sakura]
+
+*sakura
+
+[cm]
+
+京成佐倉に到着した。[l][r]
+
+[if exp="f.love >= 7"]
+    ; グッドエンド
+    彼女「今日の電車、すごく楽しかった。また一緒に通学しよ？」[l][r]
+    （グッドエンド演出とか）[l][r]
+
+[elsif exp="f.love >= 3"]
+    ; ノーマルエンド
+    彼女「また同じ電車になったらよろしくね～」[l][r]
+    （ちょっと物足りない感じの終わり）[l][r]
+
+[else]
+    ; バッドエンド
+    彼女「……じゃあ、ここで。」[l][r]
+    （微妙な空気で解散）[l][r]
+[endif]
+
+[cm]
 
 [jump target=*narita]
