@@ -1,5 +1,16 @@
+;レイヤ0を表示
+[layopt layer="0" visible="true"]
+
+;テキスト領域をレイヤ0に作成
+[ptext layer="0" name="name_space" x="180" y="400" text="" size=32]
+
+;↑で作ったテキスト領域(name_space)をキャラ名表示用であると宣言する
+[chara_config ptext="name_space"]
+
 ; ヒロイン定義
-[chara_new name="heroine" storage="heroine_normal.png" jname="ヒロイン"]
+[chara_new name="heroine" storage="normal.png" jname="ヒロイン" height=700 width=700]
+
+[position height=250 top=440 opacity=160 left=180]
 
 *narita
 
@@ -11,15 +22,27 @@
 [wait time=200]
 [freeimage layer="base"]
 
-「Narita to Sakura ～電車通学マジック～」[l][r]
+
+
+「Narita to Sakura ～電車通学マジック～」[r]
+[playbgm storage="normal.mp3" loop="true"]
+
+[l]
 
 [bg storage=train.png time=500]
 
-; ヒロイン登場（自動で画面中央に出る）
+[cm]
+
+; ヒロイン登場
 [chara_show name="heroine"]
 
 #heroine
 「おはよう、今日も成田から通学？」[l][r]
+
+[cm]
+
+#
+「ああ、そうなんだ」[l][r]
 
 会話（京成成田→公津の杜）[l][r]
 
