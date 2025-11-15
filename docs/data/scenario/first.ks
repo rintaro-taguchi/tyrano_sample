@@ -229,6 +229,8 @@
     （微妙な空気で解散）[l][r]
 [endif]
 
+[chara_hide name="heroine"]
+
 [cm]
 
 [jump target=*narita]
