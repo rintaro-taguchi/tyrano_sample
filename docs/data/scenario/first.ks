@@ -9,35 +9,58 @@
 [chara_config ptext="name_space"]
 
 ; ヒロイン定義
-[chara_new name="heroine" storage="normal.png" jname="ヒロイン" height=700 width=700]
+[chara_new name="sakurako" storage="normal.png" jname="さくらこ" height=700 width=700]
+; ヒロイン表情差分
+[chara_face name="sakurako" face="angry" storage="angry.png"]
+[chara_face name="sakurako" face="sad" storage="sad.png"]
 
+; メッセージボックス表示位置設定
 [position height=250 top=440 opacity=160 left=180]
+; [position frame="config/message_box.png"]
+
+*start
+*title
+[title name="Narita to Sakura ～電車通学マジック～"]
+;メッセージレイヤを非表示にしておく
+@layopt layer=message0 visible=false
+
+;背景画像を設定
+[image layer="base" storage=train2.png]
+[image layer=1 storage="../image/title/logo.png" visible=true top=100 left=430 width=400 height=400]
+[image layer=1 storage="normal.png" visible=true top=100 height=700 width=700 left=700]
+
+[locate x=460 y=500]
+[button graphic="title/button_start2.png" target=*narita]
+
+[s]
 
 *narita
-
+[cm]
+[freeimage layer=1]
 [eval exp="f.love=0"]
 ; 好感度（love）を0で初期化
 
-[title name="Narita to Sakura ～電車通学マジック～"]
+
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
 
-
+; メッセージレイヤを表示に戻す
+@layopt layer=message0 visible=true
 
 「Narita to Sakura ～電車通学マジック～」[r]
 [playbgm storage="normal.mp3" loop="true"]
 
 [l]
 
-[bg storage=train.png time=500]
+[bg storage=train2.png time=500]
 
 [cm]
 
 ; ヒロイン登場
-[chara_show name="heroine"]
+[chara_show name="sakurako"]
 
-#heroine
+#sakurako:default
 「おはよう、今日も成田から通学？」[l][r]
 
 [cm]
@@ -55,6 +78,8 @@
 
 [cm]
 
+#sakurako:sad
+
 反応1[l][r]
 好感度変化[l][r]
 
@@ -67,6 +92,9 @@
 *tag_2
 
 [cm]
+
+#sakurako:angry
+
 反応2[l][r]
 好感度変化[l][r]
 
@@ -232,8 +260,36 @@
 
 [stopbgm]
 
-[chara_hide name="heroine"]
+[chara_hide name="sakurako"]
+[freeimage layer=0]
 
 [cm]
 
-[jump target=*narita]
+[jump target=*credit]
+
+*credit
+
+[cm]
+; タイトル
+【Credit】[r]
+
+; 開発
+Game Design / Script / Programming [r]
+rintaro-taguchi[p]
+
+; BGM（DOVA）
+Music [r]
+空を見上げて by のる[p]
+
+; ボイス
+Voice [r]
+あみたろの声素材工房（https://amitaro.net/）より[r]
+小春音アミ様[p]
+
+; 終了メッセージ
+Thank you for playing![p]
+
+[wait time=1000]
+
+[jump target=*start]
+
