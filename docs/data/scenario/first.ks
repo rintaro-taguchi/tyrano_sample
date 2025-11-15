@@ -1,3 +1,4 @@
+;URL:http://127.0.0.1:5500/docs/index.html
 ;レイヤ0を表示
 [layopt layer="0" visible="true"]
 
@@ -228,6 +229,8 @@
     彼女「……じゃあ、ここで。」[l][r]
     （微妙な空気で解散）[l][r]
 [endif]
+
+[stopbgm]
 
 [chara_hide name="heroine"]
 
