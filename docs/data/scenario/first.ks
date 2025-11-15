@@ -1,5 +1,7 @@
+; ヒロイン定義
+[chara_new name="heroine" storage="heroine_normal.png" jname="ヒロイン"]
+
 *narita
-[bg storage=train.png time=500]
 
 [eval exp="f.love=0"]
 ; 好感度（love）を0で初期化
@@ -10,6 +12,14 @@
 [freeimage layer="base"]
 
 「Narita to Sakura ～電車通学マジック～」[l][r]
+
+[bg storage=train.png time=500]
+
+; ヒロイン登場（自動で画面中央に出る）
+[chara_show name="heroine"]
+
+#heroine
+「おはよう、今日も成田から通学？」[l][r]
 
 会話（京成成田→公津の杜）[l][r]
 
