@@ -28,6 +28,7 @@
 [image layer="base" storage="train2.png"]
 [image layer=1 storage="../image/title/logo.png" visible=true top=100 left=430 width=400 height=400]
 [image layer=1 storage="normal.png" visible=true top=100 height=700 width=700 left=700]
+[image layer=1 storage="../image/title/catch.png" visible=true top=50 left=0 width=600 height=600]
 
 [locate x=460 y=500]
 [button graphic="title/button_start2.png" target=*narita]
@@ -54,27 +55,28 @@
 
 「Narita to Sakura ～電車通学マジック～」[r]
 [playbgm storage="normal.mp3" loop="true"]
-
-[l]
+※この作品はフィクションです。実在の人物、団体、事件などとは一切関係ありません。[p]
 
 [bg storage=train2.png time=500]
 
 [cm]
 
-俺の名前は成太郎。今日こそ、あの子のハートを打ち抜くぜ！[l][r]
+俺の名前は成太郎（なりたろう）。今日こそ、あの子のハートをいただくぜ！[l][r]
 二人で話せるのは、京成成田から京成佐倉までの5駅分の時間。勝負は今、ここで決める！[l][r]
 
 [cm]
 
+【京成成田駅→公津の杜駅】
+
 #
-「や、やあ。奇遇だね...同じ電車なんて」（にやぁ）[p]
+「や、やあ。奇遇だね...同じ電車なんて」[p]
 
 ; ヒロイン登場
 [chara_show name="sakurako"]
 
 #sakurako:default
 「おはよう、確か同じクラスの...」[l][r]
-（やべ名前知らね―よ。気まずっ）[p]
+（あー、何君だっけ...）[p]
 
 [cm]
 
@@ -88,7 +90,7 @@
 
 [link target=*tere] →桜子さんだよね？なんか照れちゃうな [endlink][r]
 [link target=*kawaii] →今日もかわいいね [endlink][r]
-[link target=*kutsushita] →かわいい靴下だね [endlink][r]
+[link target=*kaori] →君は危険な香りがするね [endlink][r]
 [s]
 
 *tere
@@ -97,7 +99,7 @@
 
 #sakurako:sad
 「え、うんそうだね。改めて話すのは初めてだもんね。」[l][r]
-（なんだこいつ狙ってんのか？）[p]
+（何この人...変な人じゃないよね...）[p]
 
 ; Trueエンド条件外れ
 [eval exp="f.true_route = 0"]
@@ -114,7 +116,7 @@
 
 #sakurako:default
 「え、ありがとう？どうしたの急に...」[l][r]
-（距離感ミスりすぎだろ）[p]
+（嬉しいけど、距離感ミスってるなこの人）[p]
 
 ; Trueエンド条件外れ
 [eval exp="f.true_route = 0"]
@@ -125,22 +127,30 @@
 
 [jump target=*mori]
 
-*kutsushita
+*kaori
 
 [cm]
 
+#
+「君の香りでくらっときそうだぜ」[p]
+
 #sakurako:angry
-「うん！これお気に入りなんだ！」[l][r]
-（終わりすぎだろwww絶対変態でワロスwww）[p]
+「...は？」[l][r]
+（なんだこいつ...きもっ）[p]
+
+#
+「あ、ごめん...」[l][r]
+（褒めたつもりだったのに...）[p]
 
 ; 好感度+0
 現在の好感度：[emb exp="f.love"][l][cm]
 
 
 *mori
+【公津の杜駅→宗吾参道駅】
 
 #
-「えっと...そうだ！部活は？部活何やってるの！？」（いや話振るのうまいなー俺w）[l][r]
+「えっと...そうだ！部活は？部活何やってるの！？」（部活トークは鉄板でしょ！）[l][r]
 「俺はね...」[p]
 
 [link target=*soccer] →サッカー部 [endlink][r]
@@ -158,7 +168,10 @@
 
 #sakurako:sad
 「へぇ、そうなんだ。」[l][r]
-（こういうやつって絶対レギュラーじゃないんだよね。本気のならいいけどね）[p]
+（うーん、頑張ってるならいいけど、サッカーやってる自分が好きそうだな...）[p]
+
+#
+（あんまり反応良くないな...）[p]
 
 ; Trueエンド条件外れ
 [eval exp="f.true_route = 0"]
@@ -174,12 +187,12 @@
 [cm]
 
 #
-「剣道部。剣に生きてるんだ」[l][r]
-（剣道部とか渋いな～俺。）[p]
+「剣道部。俺は剣に生きてるんだ」[l][r]
+（これは決まったぜ...！）[p]
 
 #sakurako:angry
-「へぇ、すごいね」[l][r]
-（キザすぎるだろ！何を目指してんだよまじで）[p]
+「へぇ、すごいね～」[l][r]
+（キザすぎ！部活はいいけど、厨二病じゃん）[p]
 
 ; 好感度+0
 現在の好感度：[emb exp="f.love"][l][cm]
@@ -196,7 +209,7 @@
 
 #sakurako:default
 「へぇ、素敵だね！私はソフトボール部だよ！」[l][r]
-（えーいいじゃん、真面目な人そう）[p]
+（えーいいじゃん、真面目な人そう！）[p]
 
 ; Trueエンド条件外れ
 [eval exp="f.true_route = 0"]
@@ -206,6 +219,7 @@
 現在の好感度：[emb exp="f.love"][l][cm]
 
 *sando
+【宗吾参道駅→京成酒々井駅】
 
 #sakurako:default
 「ふわぁ...眠いな...」[p]
@@ -224,9 +238,9 @@
 
 #
 「って言ってるしね」[l][r]
-（インテリ作戦じゃ！）[p]
+（インテリ作戦！）[p]
 
-#sakurako:default
+#sakurako:sad
 「ふふ、そうだね。でもあけぼのはもっと夜明けだよ」[l][r]
 （なんか楽しいかも...？）[p]
 
@@ -248,8 +262,11 @@
 （絶対滑った...やっちった...）[p]
 
 #sakurako:default
-「ふふ、清少納言テン上げだったんだね」[l][r]
+「ふふ、清少納言もテン上げだったのかもね」[l][r]
 （いい人かも...）[p]
+
+#
+（お！以外にもいい反応！）[p]
 
 ; Trueエンド条件外れ
 [eval exp="f.true_route = 0"]
@@ -265,18 +282,28 @@
 [cm]
 #
 「って言ってるしね！」[l][r]
-（渾身のでき！）[p]
+（渾身のボケ！）[p]
 
 #sakurako:angry
-グ～[l][r]
+グ～。さくらこの腹の虫が鳴いた。[l][r]
 「き、聞いてないよね...？」[l][r]
 （ダイエット中なのに！）[p]
+
+#
+「おなか減ってるの？」[p]
+
+#sakurako:angry
+「ふん！」[l][r]
+（デリカシーなさすぎ！）[p]
 
 現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*shisui]
 
 *shisui
+【京成酒々井駅→大佐倉駅】
+#sakurako:default
+「...」[p]
 
 #
 「あのー、アニメとか漫画好き...？俺は」[l][r]
@@ -298,6 +325,10 @@
 「あー私、グロいのだめなんだよね」[l][r]
 （...気まずい）[p]
 
+#
+「あー、そうなんだ...」[l][r]
+（...気まずい）[p]
+
 [eval exp="f.love = f.love + 1"]
 ; 好感度+1
 現在の好感度：[emb exp="f.love"][l][cm]
@@ -312,7 +343,7 @@
 
 #sakurako:default
 「え！私も好き！何見てるの？」[l][r]
-（語りたい！）[p]
+（めっちゃ語りたい！）[p]
 
 #
 （めっちゃ食いつきいいやん！(ﾟ∀ﾟ)ｷﾀｺﾚ!!）[p]
@@ -334,8 +365,12 @@
 「恋愛系が好きで...」[p]
 
 #sakurako:angry
-「そ、そんなのハレンチです！」[l][r]
+「は！？そ、そんなのハレンチだよ！」[l][r]
 （朝からなんてことを...！）[p]
+
+#
+「え、ええ！？」[l][r]
+（どういうこと！？）[p]
 
 ; Trueエンド条件外れ
 [eval exp="f.true_route = 0"]
@@ -345,6 +380,7 @@
 [jump target=*osakura]
 
 *osakura
+【大佐倉駅→京成佐倉駅】
 
 #
 「そのー...えーっと...」[l][r]
@@ -356,6 +392,7 @@
 
 #
 「えっ...それは」[l][r]
+（そんなの一択だ！）[p]
 
 [link target=*suki] →好きだ！ [endlink][r]
 [link target=*imouto] →妹みたいな感じかなー [endlink][r]
@@ -387,7 +424,7 @@
 [cm]
 #
 「妹みたいに思ってるよ！」[l][r]
-（変に気を使わせたくないしな）[p]
+（チ、チキったー！(´;ω;｀)）[p]
 
 #sakurako:angry
 「きも！」[l][r]
@@ -409,7 +446,7 @@
 「親の仇だ！貴様の心臓をいただく！」[p]
 
 #sakurako:sad
-「ふーん...」[l][r]
+「ふふっ...そういうギャグがあるの？」[l][r]
 
 [eval exp="f.love = f.love +1"]
 ; 好感度+1
@@ -428,13 +465,15 @@
 ; ここでエンディング分岐
 [if exp="f.true_route == 1"]
     [bg storage="trueend.png" time=500]
-    「よく気づいたな。まさかアイツの息子が勇者の役目を引き継いでいたとは...」[l][r]
+    成太郎「いや本気さ」[l][r]
+    さくらこ「よく気づいたな。まさかアイツの息子が勇者の役目を引き継いでいたとは...」[p]
     成太郎「ああ、そうさ。俺はおまえを倒す時期を見計らっていたんだ。その間、貴様の変化を細かく観察し、剣の技を磨き続けた！覚悟！」[l][r]
     こうして俺は伝説の勇者として、桜子を倒し、世界に平和をもたらしたのだった。[l][r]
     【True End】[l][r]
 [elsif exp="f.love >= 8"]
     [bg storage="goodend.png" time=500]
-    さくらこ「私も成太郎君のことが好き。」[l][r]
+    さくらこ「私も成太郎君のことが好き！」[l][r]
+    成太郎「BIG LOVE!!」[l][r]
     こうして俺らは学校一有名なカップルになった。[l][r]
     【Good End】[l][r]
 [elsif exp="f.love >= 4"]
