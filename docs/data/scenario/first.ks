@@ -319,9 +319,9 @@
 #
 【京成酒々井駅→大佐倉駅】[p]
 
-[playse storage="akubi.mp3" loop=false ]
+[playse storage="n.mp3" loop=false ]
 #sakurako:default
-「...」[p]
+「...？」[p]
 
 #
 「あのー、アニメとか漫画好き...？俺は」[r]
