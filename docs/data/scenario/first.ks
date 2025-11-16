@@ -65,8 +65,8 @@
 二人で話せるのは、京成成田から京成佐倉までの5駅分の時間。勝負は今、ここで決める！[l][r]
 
 [cm]
-
-【京成成田駅→公津の杜駅】
+#
+【京成成田駅→公津の杜駅】[p]
 
 #
 「や、やあ。奇遇だね...同じ電車なんて」[p]
@@ -75,6 +75,7 @@
 [chara_show name="sakurako"]
 
 #sakurako:default
+[playse storage="ohayo.mp3" loop=false ]
 「おはよう、確か同じクラスの...」[l][r]
 （あー、何君だっけ...）[p]
 
@@ -98,6 +99,7 @@
 [cm]
 
 #sakurako:sad
+[playse storage="ji.mp3" loop=false ]
 「え、うんそうだね。改めて話すのは初めてだもんね。」[l][r]
 （何この人...変な人じゃないよね...）[p]
 
@@ -115,7 +117,8 @@
 [cm]
 
 #sakurako:default
-「え、ありがとう？どうしたの急に...」[l][r]
+[playse storage="ehehe.mp3" loop=false ]
+「え、えへへ、ありがとう？どうしたの急に...」[l][r]
 （嬉しいけど、距離感ミスってるなこの人）[p]
 
 ; Trueエンド条件外れ
@@ -135,6 +138,7 @@
 「君の香りでくらっときそうだぜ」[p]
 
 #sakurako:angry
+[playse storage="uu.mp3" loop=false ]
 「...は？」[l][r]
 （なんだこいつ...きもっ）[p]
 
@@ -147,7 +151,8 @@
 
 
 *mori
-【公津の杜駅→宗吾参道駅】
+#
+【公津の杜駅→宗吾参道駅】[p]
 
 #
 「えっと...そうだ！部活は？部活何やってるの！？」（部活トークは鉄板でしょ！）[l][r]
@@ -167,6 +172,7 @@
 （女子はみんなサッカー部好きやろ！決まった！）[p]
 
 #sakurako:sad
+[playse storage="ji.mp3" loop=false ]
 「へぇ、そうなんだ。」[l][r]
 （うーん、頑張ってるならいいけど、サッカーやってる自分が好きそうだな...）[p]
 
@@ -191,6 +197,7 @@
 （これは決まったぜ...！）[p]
 
 #sakurako:angry
+[playse storage="ee.mp3" loop=false ]
 「へぇ、すごいね～」[l][r]
 （キザすぎ！部活はいいけど、厨二病じゃん）[p]
 
@@ -208,7 +215,8 @@
 （ど、どうかな...？）[p]
 
 #sakurako:default
-「へぇ、素敵だね！私はソフトボール部だよ！」[l][r]
+[playse storage="oo.mp3" loop=false ]
+「おお、素敵だね！私はソフトボール部だよ！」[l][r]
 （えーいいじゃん、真面目な人そう！）[p]
 
 ; Trueエンド条件外れ
@@ -219,9 +227,11 @@
 現在の好感度：[emb exp="f.love"][l][cm]
 
 *sando
-【宗吾参道駅→京成酒々井駅】
+#
+【宗吾参道駅→京成酒々井駅】[p]
 
 #sakurako:default
+[playse storage="akubi.mp3" loop=false ]
 「ふわぁ...眠いな...」[p]
 
 #
@@ -241,6 +251,7 @@
 （インテリ作戦！）[p]
 
 #sakurako:sad
+[playse storage="uhuhu.mp3" loop=false ]
 「ふふ、そうだね。でもあけぼのはもっと夜明けだよ」[l][r]
 （なんか楽しいかも...？）[p]
 
@@ -262,6 +273,7 @@
 （絶対滑った...やっちった...）[p]
 
 #sakurako:default
+[playse storage="uhuhu.mp3" loop=false ]
 「ふふ、清少納言もテン上げだったのかもね」[l][r]
 （いい人かも...）[p]
 
@@ -287,6 +299,7 @@
 #sakurako:angry
 グ～。さくらこの腹の虫が鳴いた。[l][r]
 「き、聞いてないよね...？」[l][r]
+[playse storage="ji.mp3" loop=false ]
 （ダイエット中なのに！）[p]
 
 #
@@ -295,14 +308,18 @@
 #sakurako:angry
 「ふん！」[l][r]
 （デリカシーなさすぎ！）[p]
+[playse storage="naniyo.mp3" loop=false ]
 
 現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*shisui]
 
 *shisui
-【京成酒々井駅→大佐倉駅】
+#
+【京成酒々井駅→大佐倉駅】[p]
+
 #sakurako:default
+[playse storage="akubi.mp3" loop=false ]
 「...」[p]
 
 #
@@ -322,6 +339,7 @@
 「バトル系が好きで...」[p]
 
 #sakurako:sad
+[playse storage="uu.mp3" loop=false ]
 「あー私、グロいのだめなんだよね」[l][r]
 （...気まずい）[p]
 
@@ -342,6 +360,7 @@
 「スポーツ系が好きで...」[p]
 
 #sakurako:default
+[playse storage="oo.mp3" loop=false ]
 「え！私も好き！何見てるの？」[l][r]
 （めっちゃ語りたい！）[p]
 
@@ -365,6 +384,7 @@
 「恋愛系が好きで...」[p]
 
 #sakurako:angry
+[playse storage="uso.mp3" loop=false ]
 「は！？そ、そんなのハレンチだよ！」[l][r]
 （朝からなんてことを...！）[p]
 
@@ -380,7 +400,8 @@
 [jump target=*osakura]
 
 *osakura
-【大佐倉駅→京成佐倉駅】
+#
+【大佐倉駅→京成佐倉駅】[p]
 
 #
 「そのー...えーっと...」[l][r]
@@ -388,6 +409,7 @@
 
 #sakurako:default
 「あのさ...」[l][r]
+[playse storage="ji.mp3" loop=false ]
 「成太郎君は私のことどう思ってるの？」[p]
 
 #
@@ -408,7 +430,8 @@
 （もうどうにでもなれ！）[p]
 
 #sakurako:default
-「うん...」[l][r]
+[playse storage="ehehe.mp3" loop=false ]
+「えへへ...」[l][r]
 
 ; Trueエンド条件外れ
 [eval exp="f.true_route = 0"]
@@ -427,6 +450,7 @@
 （チ、チキったー！(´;ω;｀)）[p]
 
 #sakurako:angry
+[playse storage="ee.mp3" loop=false ]
 「きも！」[l][r]
 （きも！）[p]
 
@@ -446,6 +470,7 @@
 「親の仇だ！貴様の心臓をいただく！」[p]
 
 #sakurako:sad
+[playse storage="uhuhu.mp3" loop=false ]
 「ふふっ...そういうギャグがあるの？」[l][r]
 
 [eval exp="f.love = f.love +1"]
@@ -472,24 +497,25 @@
     【True End】[l][r]
 [elsif exp="f.love >= 8"]
     [bg storage="goodend.png" time=500]
+    [playse storage="ehehe.mp3" loop=false ]
     さくらこ「私も成太郎君のことが好き！」[l][r]
     成太郎「BIG LOVE!!」[l][r]
     こうして俺らは学校一有名なカップルになった。[l][r]
     【Good End】[l][r]
 [elsif exp="f.love >= 4"]
     [bg storage="normalend.png" time=500]
+    [playse storage="gomen.mp3" loop=false ]
     さくらこ「意外と楽しかったよ。友達が待ってるから、またあとで教室で！」[l][r]
     まあ少し距離が近づいただけ良しとするか。[l][r]
     【Normal End】[l][r]
 [else]
     [bg storage="badend.png" time=500]
+    [playse storage="jane.mp3" loop=false ]
     さくらこ「じゃあね！彼氏が待ってるから！」[l][r]
     さくらこはイケメンの船橋と付き合っていたらしい。[l][r]
     脳が破壊される音がした。[l][r]
     【Bad End】[l][r]
 [endif]
-
-[stopbgm]
 
 [cm]
 
@@ -515,11 +541,12 @@ Music [r]
 
 ; ボイス
 Voice [r]
-あみたろの声素材工房（https://amitaro.net/）より[r]
-小春音アミ様[p]
+効果音ラボ[p]
 
 ; 終了メッセージ
 Thank you for playing![p]
+
+[stopbgm]
 
 [wait time=1000]
 
