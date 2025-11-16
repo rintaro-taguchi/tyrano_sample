@@ -37,9 +37,13 @@
 *narita
 [cm]
 [freeimage layer=1]
-[eval exp="f.love=0"]
-; 好感度（love）を0で初期化
 
+; 好感度（love）を0で初期化
+[eval exp="f.love=0"]
+
+; Trueルート判定用
+; 1 = まだTrueエンドの可能性あり / 0 = どこかで条件を外した
+[eval exp="f.true_route = 1"]
 
 [hidemenubutton]
 [wait time=200]
@@ -57,31 +61,43 @@
 
 [cm]
 
-; ヒロイン登場
-[chara_show name="sakurako"]
-
-#sakurako:default
-「おはよう、今日も成田から通学？」[l][r]
+俺の名前は成太郎。今日こそ、あの子のハートを打ち抜くぜ！[l][r]
+二人で話せるのは、京成成田から京成佐倉までの5駅分の時間。勝負は今、ここで決める！[l][r]
 
 [cm]
 
 #
-「ああ、そうなんだ」[l][r]
+「や、やあ。奇遇だね...同じ電車なんて」（にやぁ）[p]
 
-会話（京成成田→公津の杜）[l][r]
+; ヒロイン登場
+[chara_show name="sakurako"]
 
-[link target=*tag_1] →解答1 [endlink][r]
-[link target=*tag_2] →解答2 [endlink][r]
+#sakurako:default
+「おはよう、確か同じクラスの...」[l][r]
+（やべ名前知らね―よ。気まずっ）[p]
+
+[cm]
+
+#
+「あ、成太郎です。よ、よろしく...」[l][r]
+（おっふ、緊張しちまうぜ。平常心平常心っと）[p]
+
+#
+「今日はお日柄もよく...ってそうじゃなくて...」[l][r]
+（なんか気の利いたことを言わないと！）[r]
+
+[link target=*tere] →桜子さんだよね？なんか照れちゃうな [endlink][r]
+[link target=*kawaii] →今日もかわいいね [endlink][r]
+[link target=*kutsushita] →かわいい靴下だね [endlink][r]
 [s]
 
-*tag_1
+*tere
 
 [cm]
 
 #sakurako:sad
-
-反応1[l][r]
-好感度変化[l][r]
+「え、うんそうだね。改めて話すのは初めてだもんね。」[l][r]
+（なんだこいつ狙ってんのか？）[p]
 
 [eval exp="f.love = f.love + 1"]
 ; 好感度+1
@@ -89,14 +105,13 @@
 
 [jump target=*mori]
 
-*tag_2
+*kawaii
 
 [cm]
 
-#sakurako:angry
-
-反応2[l][r]
-好感度変化[l][r]
+#sakurako:default
+「え、ありがとう？どうしたの急に...」[l][r]
+（距離感ミスりすぎだろ）[p]
 
 [eval exp="f.love = f.love + 2"]
 ; 好感度+2
@@ -104,15 +119,28 @@
 
 [jump target=*mori]
 
+*kutsushita
+
+[cm]
+
+#sakurako:angry
+「うん！これお気に入りなんだ！」[l][r]
+（終わりすぎだろwww絶対変態でワロスwww）[p]
+
+[eval exp="f.love = f.love + 2"]
+; 好感度+2
+現在の好感度：[emb exp="f.love"][l][cm]
+
+
 *mori
 
 会話（公津の杜→宗吾参道）[l][r]
 
-[link target=*tag_3] →解答3 [endlink][r]
+[link target=*tag3] →解答3 [endlink][r]
 [link target=*tag_4] →解答4 [endlink][r]
 [s]
 
-*tag_3
+*tag3
 
 [cm]
 
@@ -242,20 +270,15 @@
 
 京成佐倉に到着した。[l][r]
 
-[if exp="f.love >= 7"]
-    ; グッドエンド
-    彼女「今日の電車、すごく楽しかった。また一緒に通学しよ？」[l][r]
-    （グッドエンド演出とか）[l][r]
-
-[elsif exp="f.love >= 3"]
-    ; ノーマルエンド
-    彼女「また同じ電車になったらよろしくね～」[l][r]
-    （ちょっと物足りない感じの終わり）[l][r]
-
+; ここでエンディング分岐
+[if exp="f.true_route == 1"]
+    Trueエンド条件成立[l][r]
+[elsif exp="f.love >= 8"]
+    Goodエンド条件成立[l][r]
+[elsif exp="f.love >= 4"]
+    Normalエンド条件成立[l][r]
 [else]
-    ; バッドエンド
-    彼女「……じゃあ、ここで。」[l][r]
-    （微妙な空気で解散）[l][r]
+    Badエンド条件成立[l][r]
 [endif]
 
 [stopbgm]
