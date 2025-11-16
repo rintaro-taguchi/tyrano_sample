@@ -1,4 +1,7 @@
 ;URL:http://127.0.0.1:5500/docs/index.html
+
+*start
+*title
 ;レイヤ0を表示
 [layopt layer="0" visible="true"]
 
@@ -18,8 +21,6 @@
 [position height=250 top=440 opacity=160 left=180]
 ; [position frame="config/message_box.png"]
 
-*start
-*title
 [title name="Narita to Sakura ～電車通学マジック～"]
 ;メッセージレイヤを非表示にしておく
 @layopt layer=message0 visible=false
@@ -498,7 +499,7 @@
     成太郎「いや本気さ」[l][r]
     さくらこ「よく気づいたな。まさかアイツの息子が勇者の役目を引き継いでいたとは...」[p]
     成太郎「ああ、そうさ。俺はおまえを倒す時期を見計らっていたんだ。その間、貴様の変化を細かく観察し、剣の技を磨き続けた！覚悟！」[l][r]
-    こうして俺は伝説の勇者として、桜子を倒し、世界に平和をもたらしたのだった。[l][r]
+    こうして俺は伝説の勇者として、さくらこを倒し、世界に平和をもたらしたのだった。[l][r]
     【True End】[l][r]
 [elsif exp="f.love >= 8"]
     [bg storage="goodend.png" time=500]
