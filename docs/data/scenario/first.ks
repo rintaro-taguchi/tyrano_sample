@@ -74,8 +74,8 @@
 ; ヒロイン登場
 [chara_show name="sakurako"]
 
-#sakurako:default
 [playse storage="ohayo.mp3" loop=false ]
+#sakurako:default
 「おはよう、確か同じクラスの...」[r]
 （あー、何君だっけ...）[p]
 
@@ -89,7 +89,7 @@
 「今日はお日柄もよく...ってそうじゃなくて...」[r]
 （なんか気の利いたことを言わないと！）[r]
 
-[link target=*tere] →桜子さんだよね？なんか照れちゃうな [endlink][r]
+[link target=*tere] →さくらこさんだよね？なんか照れちゃうな [endlink][r]
 [link target=*kawaii] →今日もかわいいね [endlink][r]
 [link target=*kaori] →君は危険な香りがするね [endlink][r]
 [s]
@@ -98,8 +98,8 @@
 
 [cm]
 
-#sakurako:sad
 [playse storage="ji.mp3" loop=false ]
+#sakurako:sad
 「え、うんそうだね。改めて話すのは初めてだもんね。」[r]
 （何この人...変な人じゃないよね...）[p]
 
@@ -116,8 +116,8 @@
 
 [cm]
 
-#sakurako:default
 [playse storage="ehehe.mp3" loop=false ]
+#sakurako:default
 「え、えへへ、ありがとう？どうしたの急に...」[r]
 （嬉しいけど、距離感ミスってるなこの人）[p]
 
@@ -137,8 +137,8 @@
 #
 「君の香りでくらっときそうだぜ」[p]
 
-#sakurako:angry
 [playse storage="uu.mp3" loop=false ]
+#sakurako:angry
 「...は？」[r]
 （なんだこいつ...きもっ）[p]
 
@@ -171,8 +171,8 @@
 「俺サッカー部。まじでうまいよ！やべーよ！」[r]
 （女子はみんなサッカー部好きやろ！決まった！）[p]
 
-#sakurako:sad
 [playse storage="ji.mp3" loop=false ]
+#sakurako:sad
 「へぇ、そうなんだ。」[r]
 （うーん、頑張ってるならいいけど、サッカーやってる自分が好きそうだな...）[p]
 
@@ -196,8 +196,8 @@
 「剣道部。俺は剣に生きてるんだ」[r]
 （これは決まったぜ...！）[p]
 
-#sakurako:angry
 [playse storage="ee.mp3" loop=false ]
+#sakurako:angry
 「へぇ、すごいね～」[r]
 （キザすぎ！部活はいいけど、厨二病じゃん）[p]
 
@@ -214,8 +214,8 @@
 「美術部。絵を描くのが好きなんだ。」[r]
 （ど、どうかな...？）[p]
 
-#sakurako:default
 [playse storage="oo.mp3" loop=false ]
+#sakurako:default
 「おお、素敵だね！私はソフトボール部だよ！」[r]
 （えーいいじゃん、真面目な人そう！）[p]
 
@@ -230,8 +230,8 @@
 #
 【宗吾参道駅→京成酒々井駅】[p]
 
-#sakurako:default
 [playse storage="akubi.mp3" loop=false ]
+#sakurako:default
 「ふわぁ...眠いな...」[p]
 
 #
@@ -250,8 +250,8 @@
 「って言ってるしね」[r]
 （インテリ作戦！）[p]
 
-#sakurako:sad
 [playse storage="uhuhu.mp3" loop=false ]
+#sakurako:sad
 「ふふ、そうだね。でもあけぼのはもっと夜明けだよ」[r]
 （なんか楽しいかも...？）[p]
 
@@ -272,8 +272,8 @@
 「って言ってるしね」[r]
 （絶対滑った...やっちった...）[p]
 
-#sakurako:default
 [playse storage="uhuhu.mp3" loop=false ]
+#sakurako:default
 「ふふ、清少納言もテン上げだったのかもね」[r]
 （いい人かも...）[p]
 
@@ -305,8 +305,8 @@
 #
 「おなか減ってるの？」[p]
 
-#sakurako:angry
 [playse storage="naniyo.mp3" loop=false ]
+#sakurako:angry
 「ふん！」[r]
 （デリカシーなさすぎ！）[p]
 
@@ -318,8 +318,8 @@
 #
 【京成酒々井駅→大佐倉駅】[p]
 
-#sakurako:default
 [playse storage="akubi.mp3" loop=false ]
+#sakurako:default
 「...」[p]
 
 #
@@ -338,8 +338,8 @@
 #
 「バトル系が好きで...」[p]
 
-#sakurako:sad
 [playse storage="uu.mp3" loop=false ]
+#sakurako:sad
 「あー私、グロいのだめなんだよね」[r]
 （...気まずい）[p]
 
@@ -359,8 +359,8 @@
 #
 「スポーツ系が好きで...」[p]
 
-#sakurako:default
 [playse storage="oo.mp3" loop=false ]
+#sakurako:default
 「え！私も好き！何見てるの？」[r]
 （めっちゃ語りたい！）[p]
 
@@ -383,8 +383,8 @@
 #
 「恋愛系が好きで...」[p]
 
-#sakurako:angry
 [playse storage="uso.mp3" loop=false ]
+#sakurako:angry
 「は！？そ、そんなのハレンチだよ！」[r]
 （朝からなんてことを...！）[p]
 
@@ -407,9 +407,9 @@
 「そのー...えーっと...」[r]
 （あと少しなのにもう話題がない...）[p]
 
+[playse storage="ji.mp3" loop=false ]
 #sakurako:default
 「あのさ...」[r]
-[playse storage="ji.mp3" loop=false ]
 「成太郎君は私のことどう思ってるの？」[p]
 
 #
@@ -429,8 +429,8 @@
 「一目ぼれでした！付き合ってください！」[r]
 （もうどうにでもなれ！）[p]
 
-#sakurako:default
 [playse storage="ehehe.mp3" loop=false ]
+#sakurako:default
 「えへへ...」[l][r]
 
 ; Trueエンド条件外れ
@@ -449,8 +449,8 @@
 「妹みたいに思ってるよ！」[r]
 （チ、チキったー！(´;ω;｀)）[p]
 
-#sakurako:angry
 [playse storage="ee.mp3" loop=false ]
+#sakurako:angry
 「きも！」[r]
 （きも！）[p]
 
@@ -469,8 +469,8 @@
 #
 「親の仇だ！貴様の心臓をいただく！」[p]
 
-#sakurako:sad
 [playse storage="uhuhu.mp3" loop=false ]
+#sakurako:sad
 「ふふっ...そういうギャグがあるの？」[l][r]
 
 [eval exp="f.love = f.love +1"]
