@@ -103,7 +103,7 @@
 ; 好感度+1
 現在の好感度：[emb exp="f.love"][l][cm]
 
-[jump target=*mori]
+[jump target=*sando]
 
 *kawaii
 
@@ -127,25 +127,32 @@
 「うん！これお気に入りなんだ！」[l][r]
 （終わりすぎだろwww絶対変態でワロスwww）[p]
 
-[eval exp="f.love = f.love + 2"]
-; 好感度+2
+; 好感度+0
 現在の好感度：[emb exp="f.love"][l][cm]
 
 
 *mori
 
-会話（公津の杜→宗吾参道）[l][r]
+#
+「えっと...そうだ！部活は？部活何やってるの！？」（いや話振るのうまいなー俺w）[l][r]
+「俺はね...」[p]
 
-[link target=*tag3] →解答3 [endlink][r]
-[link target=*tag_4] →解答4 [endlink][r]
+[link target=*soccer] →サッカー部 [endlink][r]
+[link target=*kendo] →剣道部 [endlink][r]
+[link target=*art] →美術部 [endlink][r]
 [s]
 
-*tag3
+*soccer
 
 [cm]
 
-反応3[l][r]
-好感度変化[l][r]
+#
+「俺サッカー部。まじでうまいよ！やべーよ！」[l][r]
+（女子はみんなサッカー部好きやろ！決まった！）[p]
+
+#sakurako:sad
+「へぇ、そうなんだ。」[l][r]
+（こういうやつって絶対レギュラーじゃないんだよね。本気のならいいけどね）[p]
 
 [eval exp="f.love = f.love + 1"]
 ; 好感度+1
@@ -153,32 +160,63 @@
 
 [jump target=*sando]
 
-*tag_4
+*kendo
 
 [cm]
-反応4[l][r]
-好感度変化[l][r]
+
+#
+「剣道部。剣に生きてるんだ」[l][r]
+（剣道部とか渋いな～俺。）[p]
+
+#sakurako:angry
+「へぇ、すごいね」[l][r]
+（キザすぎるだろ！何を目指してんだよまじで）[p]
+
+; 好感度+0
+現在の好感度：[emb exp="f.love"][l][cm]
+
+[jump target=*sando]
+
+*art
+
+[cm]
+
+#
+「美術部。絵を描くのが好きなんだ。」[l][r]
+（ど、どうかな...？）[p]
+
+#sakurako:default
+「へぇ、素敵だね！私はソフトボール部だよ！」[l][r]
+（えーいいじゃん、真面目な人そう）[p]
 
 [eval exp="f.love = f.love + 2"]
 ; 好感度+2
 現在の好感度：[emb exp="f.love"][l][cm]
 
-[jump target=*sando]
-
 *sando
 
-会話（宗吾参道→京成酒々井）[l][r]
+#sakurako:default
+「ふわぁ...眠いな...」[p]
 
-[link target=*tag_5] →解答5 [endlink][r]
-[link target=*tag_6] →解答6 [endlink][r]
+#
+「そうだね、朝早いもんね。でも春の朝はいいよね！清少納言も『枕草子』で...」[l][r]
+
+[link target=*akebono] →春はあけぼの [endlink][r]
+[link target=*agepoyo] →春はあげぽよ [endlink][r]
+[link target=*agemono] →春は揚げ物 [endlink][r]
 [s]
 
-*tag_5
+*akebono
 
 [cm]
 
-反応5[l][r]
-好感度変化[l][r]
+#
+「って言ってるしね」[l][r]
+（インテリ作戦じゃ！）[p]
+
+#sakurako:default
+「ふふ、そうだね。でもあけぼのはもっと夜明けだよ」[l][r]
+（なんか楽しいかも...？）[p]
 
 [eval exp="f.love = f.love + 1"]
 ; 好感度+1
@@ -186,14 +224,38 @@
 
 [jump target=*shisui]
 
-*tag_6
+*agepoyo
 
 [cm]
-反応6[l][r]
-好感度変化[l][r]
+
+#
+「って言ってるしね」[l][r]
+（絶対滑った...やっちった...）[p]
+
+#sakurako:default
+「ふふ、清少納言テン上げだったんだね」[l][r]
+（いい人かも...）[p]
 
 [eval exp="f.love = f.love + 2"]
 ; 好感度+2
+現在の好感度：[emb exp="f.love"][l][cm]
+
+[jump target=*shisui]
+
+*agemono
+
+[cm]
+#
+「って言ってるしね！」[l][r]
+（渾身のでき！）[p]
+
+#sakurako:angry
+グ～[l][r]
+「き、聞いてないよね...？」[l][r]
+（ダイエット中なのに！）[p]
+
+[eval exp="f.true_route = 0"]
+; Trueエンド条件外れ
 現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*shisui]
