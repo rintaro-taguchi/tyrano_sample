@@ -53,7 +53,7 @@
 @layopt layer=message0 visible=true
 
 「Narita to Sakura ～電車通学マジック～」[r]
-[playbgm storage="normal.mp3" loop="true"]
+; [playbgm storage="normal.mp3" loop="true"]
 
 [l]
 
@@ -99,6 +99,9 @@
 「え、うんそうだね。改めて話すのは初めてだもんね。」[l][r]
 （なんだこいつ狙ってんのか？）[p]
 
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
+
 [eval exp="f.love = f.love + 1"]
 ; 好感度+1
 現在の好感度：[emb exp="f.love"][l][cm]
@@ -112,6 +115,9 @@
 #sakurako:default
 「え、ありがとう？どうしたの急に...」[l][r]
 （距離感ミスりすぎだろ）[p]
+
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
 
 [eval exp="f.love = f.love + 2"]
 ; 好感度+2
@@ -154,6 +160,9 @@
 「へぇ、そうなんだ。」[l][r]
 （こういうやつって絶対レギュラーじゃないんだよね。本気のならいいけどね）[p]
 
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
+
 [eval exp="f.love = f.love + 1"]
 ; 好感度+1
 現在の好感度：[emb exp="f.love"][l][cm]
@@ -189,6 +198,9 @@
 「へぇ、素敵だね！私はソフトボール部だよ！」[l][r]
 （えーいいじゃん、真面目な人そう）[p]
 
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
+
 [eval exp="f.love = f.love + 2"]
 ; 好感度+2
 現在の好感度：[emb exp="f.love"][l][cm]
@@ -218,6 +230,9 @@
 「ふふ、そうだね。でもあけぼのはもっと夜明けだよ」[l][r]
 （なんか楽しいかも...？）[p]
 
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
+
 [eval exp="f.love = f.love + 1"]
 ; 好感度+1
 現在の好感度：[emb exp="f.love"][l][cm]
@@ -235,6 +250,9 @@
 #sakurako:default
 「ふふ、清少納言テン上げだったんだね」[l][r]
 （いい人かも...）[p]
+
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
 
 [eval exp="f.love = f.love + 2"]
 ; 好感度+2
@@ -262,18 +280,25 @@
 
 *shisui
 
-会話（京成酒々井→大佐倉）[l][r]
+#
+「あのー、アニメとか漫画好き...？俺は」[l][r]
+（そろそろトークデッキが...まずい！）[p]
 
-[link target=*tag_7] →解答7 [endlink][r]
-[link target=*tag_8] →解答8 [endlink][r]
+[link target=*battle] →バトル系 [endlink][r]
+[link target=*sport] →スポーツ系 [endlink][r]
+[link target=*love] →恋愛系 [endlink][r]
 [s]
 
-*tag_7
+*battle
 
 [cm]
 
-反応7[l][r]
-好感度変化[l][r]
+#
+「バトル系が好きで...」[p]
+
+#sakurako:sad
+「あー私、グロいのだめなんだよね」[l][r]
+（...気まずい）[p]
 
 [eval exp="f.love = f.love + 1"]
 ; 好感度+1
@@ -281,47 +306,115 @@
 
 [jump target=*osakura]
 
-*tag_8
+*sport
 
 [cm]
-反応8[l][r]
-好感度変化[l][r]
+#
+「スポーツ系が好きで...」[p]
+
+#sakurako:default
+「え！私も好き！何見てるの？」[l][r]
+（語りたい！）[p]
+
+#
+（めっちゃ食いつきいいやん！(ﾟ∀ﾟ)ｷﾀｺﾚ!!）[p]
+
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
 
 [eval exp="f.love = f.love + 2"]
 ; 好感度+2
+現在の好感度：[emb exp="f.love"][l][cm]
+
+[jump target=*osakura]
+
+*love
+
+[cm]
+
+#
+「恋愛系が好きで...」[p]
+
+#sakurako:angry
+「そ、そんなのハレンチです！」[l][r]
+（朝からなんてことを...！）[p]
+
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
+
 現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*osakura]
 
 *osakura
 
-会話（大佐倉→佐倉）[l][r]
+#
+「そのー...えーっと...」[l][r]
+（あと少しなのにもう話題がない...）[p]
 
-[link target=*tag_9] →解答9 [endlink][r]
-[link target=*tag_10] →解答10 [endlink][r]
+#sakurako:default
+「あのさ...」[l][r]
+「成太郎君は私のことどう思ってるの？」[p]
+
+#
+「えっ...それは」[l][r]
+
+[link target=*suki] →好きだ！ [endlink][r]
+[link target=*imouto] →妹みたいな感じかなー [endlink][r]
+[link target=*kataki] →親の仇だ！ [endlink][r]
 [s]
 
-*tag_9
+*suki
 
 [cm]
 
-反応9[l][r]
-好感度変化[l][r]
+#
+「一目ぼれでした！付き合ってください！」[l][r]
+（もうどうにでもなれ！）[p]
 
-[eval exp="f.love = f.love + 1"]
-; 好感度+1
+#sakurako:default
+「うん...」[l][r]
+
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
+
+[eval exp="f.love = f.love + 2"]
+; 好感度+2
 現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*sakura]
 
-*tag_10
+*imouto
 
 [cm]
-反応10[l][r]
-好感度変化[l][r]
+#
+「妹みたいに思ってるよ！」[l][r]
+（変に気を使わせたくないしな）[p]
 
-[eval exp="f.love = f.love + 2"]
-; 好感度+2
+#sakurako:angry
+「きも！」[l][r]
+（きも！）[p]
+
+; Trueエンド条件外れ
+[eval exp="f.true_route = 0"]
+
+[eval exp="f.love = f.love -1"]
+; 好感度-1
+現在の好感度：[emb exp="f.love"][l][cm]
+
+[jump target=*sakura]
+
+*kataki
+
+[cm]
+#
+「親の仇だ！貴様の心臓をいただく！」[p]
+
+#sakurako:sad
+「ふーん...」[l][r]
+
+[eval exp="f.love = f.love +1"]
+; 好感度+1
 現在の好感度：[emb exp="f.love"][l][cm]
 
 [jump target=*sakura]
